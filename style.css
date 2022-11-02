@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #1f1f1f 0%, #359feb 40%, #49f34e 60%, #0ef81e 100%);
+    background-size: 200% 200%;
+    animation: float 6s linear infinite alternate;
+}
+@keyframes float {
+    from{background-position: 0 0;}
+    to {background-position: 100% 100%;}
+}
+
+section {
+    padding: 45px;
+    background-color: #fff;
+    width: 500px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    box-shadow: 2px 15px 20px rgba(61,61,61,.4);
+}
+
+header img {
+    width: 140px;
+}
+
+header h3 {
+    color: #398be9;
+    font-size: 1.35rem;
+}
+
+header {
+    animation: fromTop .7s .2s forwards;
+}
+
+section main {
+    animation: fromBottom .7s .2s forwards;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+
+main a{
+    background: #398be9;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 10px 12px #515151;
+    transition: all .5s ease-in-out;
+}
+
+main a:hover {
+    opacity: .80;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    font-size: 10px;
+}
+
+@media (max-width: 520px) {
+    section {
+        width: 85%;
+        padding: 40px;
+    }
+    header img{
+        width: 100px;
+    }
+    header h3{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 15px;
+    }
+
+    main {
+        gap: 30px;
+    }
+
+    main a{
+        padding: 10px 0;
+        box-shadow: 8px 8px #515151 ;
+    }
+}
+
+/* Animation */
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
